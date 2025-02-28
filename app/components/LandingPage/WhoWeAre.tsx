@@ -1,4 +1,3 @@
-import { servicesData } from '@/app/data/ourServicesData';
 import { CMP_TITLE } from '@/app/lib/constants';
 import Image from 'next/image';
 import React from 'react';
