@@ -8,6 +8,8 @@ import kapil from "../../public/assets/team/kapil-dev.webp"
 import princeSoni from "../../public/assets/team/prince-kumar-soni.webp"
 import sabir from "../../public/assets/team/Sabir-Sir.jpeg"
 import jitender from "../../public/assets/team/jitender.webp"
+import sanjeev from "../../public/assets/team/sanjeev.webp"
+
 
 export const ourTeamData = [
   {
@@ -29,45 +31,51 @@ export const ourTeamData = [
     image: avinash,
   },
   {
-    name: "Ms. Jyoti Singh",
-    designation: "Project Manager ",
+    name: "Mr. Sanjeev Prajapati",
+    designation: "Director (Projects) ",
     text:"",
-    image: jyoti,
+    image: sanjeev,
   },
-  {
-    name: "Mr. Naval Chaudhary",
-    designation: "Project Manager",
-    text:"",
-    image: naval ,
-  },
+  // {
+  //   name: "Ms. Jyoti Singh",
+  //   designation: "Project Manager ",
+  //   text:"",
+  //   image: jyoti,
+  // },
+  // {
+  //   name: "Mr. Naval Chaudhary",
+  //   designation: "Project Manager",
+  //   text:"",
+  //   image: naval ,
+  // },
   {
     name: "Mr. Arvind Pandey",
     designation: "MIS Manager ",
     text:"",
     image: arvind ,
   },
-  {
-    name: "Mr. Kapil Dev",
-    designation: "Center Manager ",
-    text:"",
-    image: kapil ,
-  },
-  {
-    name: "Mr. Prince Kumar Soni",
-    designation: "Assistant Account Manager ",
-    text:"",
-    image: princeSoni ,
-  },
-  {
-    name: "Mr. Sabir",
-    designation: "Project Co-ordinator",
-    text:"",
-    image:sabir ,
-  },
-  {
-    name: "Mr. Jitender",
-    designation: "Office Executive",
-    text:"",
-    image: jitender,
-  },
+  // {
+  //   name: "Mr. Kapil Dev",
+  //   designation: "Center Manager ",
+  //   text:"",
+  //   image: kapil ,
+  // },
+  // {
+  //   name: "Mr. Prince Kumar Soni",
+  //   designation: "Assistant Account Manager ",
+  //   text:"",
+  //   image: princeSoni ,
+  // },
+  // {
+  //   name: "Mr. Sabir",
+  //   designation: "Project Co-ordinator",
+  //   text:"",
+  //   image:sabir ,
+  // },
+  // {
+  //   name: "Mr. Jitender",
+  //   designation: "Office Executive",
+  //   text:"",
+  //   image: jitender,
+  // },
 ];

@@ -14,7 +14,7 @@ const OurTeam = () => {
     <div className="container mx-auto">
       <h3 className="text-4xl theme-clr text-center font-bold">Our Team</h3>
 
-      <div className="max-w-7xl mx-auto py-12 px-6">
+      <div className="max-w-7xl mx-auto pt-12 px-6">
         <Swiper
           modules={[Navigation, Autoplay]}
           spaceBetween={20}
@@ -24,7 +24,7 @@ const OurTeam = () => {
             640: { slidesPerView: 2 },
             768: { slidesPerView: 3 },
             1024: { slidesPerView: 4 },
-            1280: { slidesPerView: 5 },
+            1280: { slidesPerView: 4 },
           }}
           navigation
           // pagination={{ clickable: true }}

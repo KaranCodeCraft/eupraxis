@@ -1,28 +1,70 @@
-import { servicesData } from '@/app/data/ourServicesData';
-import { CMP_TITLE } from '@/app/lib/constants';
-import Image from 'next/image';
-import React from 'react';
-import servicesImg from "@/public/assets/about/services.jpg"
+"use client";
+import { CMP_TITLE } from "@/app/lib/constants";
+import Image, { StaticImageData } from "next/image";
+import React, { useState } from "react";
+import { ourServicesData } from "@/app/data/ourServicesData";
 
-const Services = () => {
-    return (
-            <div  className=" container mx-auto ">
-                <div className="text-center mx-auto pb-5">
-                    <h4 className="theme-clr text-4xl font-bold">Our Services</h4>
-                    <div className="flex flex-col justify-center p-4 md:flex-row gap-4 ">
-                        <p className="text-gray-700 w-full md:w-1/2 my-auto">
-                            {CMP_TITLE}  is dedicated to empowering individuals through skill development, bridging the gap between education and industry needs. Our mission is to equip aspiring professionals with practical, job-ready skills through comprehensive training programs, industry collaborations, and innovative learning solutions. With a strong commitment to excellence, we focus on transforming careers, fostering entrepreneurship, and driving economic growth through skill-based education. Join us in shaping a future where skills open doors to limitless opportunities
-                        </p>
-                        <div className="img">
-                            <div className="">
-                                <Image src={servicesImg} width={350} height={350} alt="services" className="w-full object-cover rounded-md" />
-                            </div>
-                        </div>
-                    </div>
-                </div>
+const Services: React.FC = () => {
+  return (
+    <div className="container mx-auto px-4">
+      <div className="text-center mx-auto">
+        <h4 className="theme-clr text-4xl font-bold">Our Services</h4>
+        <div className="flex justify-center">
+          <p className="text-gray-700 w-full my-auto md:w-3/4 px-4 py-2">
+            At {CMP_TITLE}, we follow a structured approach to mobilize, train,
+            and place candidates, ensuring they gain the right skills and secure
+            meaningful employment.
+          </p>
         </div>
 
-    );
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 px-5 mt-6">
+          {ourServicesData?.map((service, index) => (
+            <ServiceCard key={index} service={service} />
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+};
+
+interface ServiceItem {
+  title: string;
+  desc: string;
+  image: StaticImageData; 
+}
+
+const ServiceCard: React.FC<{ service: ServiceItem }> = ({ service }) => {
+  const [isExpanded, setIsExpanded] = useState(false);
+  const truncatedDesc = service.desc.slice(0, 120);
+  const showReadMore = service.desc.length > 120;
+
+  return (
+    <div className="p-4 bg-white rounded-lg shadow-lg hover:shadow-xl transition-all">
+      <Image
+        src={service.image}
+        alt={service.title}
+        width={500}
+        height={300}
+        className="w-full h-48 object-cover rounded-md"
+      />
+      <div className="pt-4">
+        <p className="text-xl text-center font-semibold theme-clr hover:font-bold">
+          {service.title}
+        </p>
+        <p className="text-sm text-gray-700 mt-2">
+          {isExpanded ? service.desc : `${truncatedDesc}...`}
+        </p>
+        {showReadMore && (
+          <button
+            onClick={() => setIsExpanded(!isExpanded)}
+            className="mt-2 text-blue-500 hover:underline focus:outline-none text-sm"
+          >
+            {isExpanded ? "Read Less" : "Read More"}
+          </button>
+        )}
+      </div>
+    </div>
+  );
 };
 
 export default Services;

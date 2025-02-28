@@ -1,50 +1,21 @@
-export const servicesData = [
-    {
-      title: "Online Courses",
-      description:
-        "We offer a wide range of online courses to cater to different learning needs and interests.",
-      image: "https://placehold.co/600x400/000000/FFF",
-    },
-    {
-      title: "Expert Tutors",
-      description:
-        "Our experienced tutors provide personalized guidance to help students excel in their studies.",
-      image: "https://placehold.co/600x400/000000/FFF",
-    },
-    {
-      title: "Community Support",
-      description:
-        "Join our community for support and resources that foster collaborative learning experiences.",
-      image: "https://placehold.co/600x400/000000/FFF",
-    },
-    {
-      title: "Interactive Platforms",
-      description:
-        "Our platforms provide interactive tools to enhance the learning experience for students.",
-      image: "https://placehold.co/600x400/000000/FFF",
-    },
-    {
-      title: "Certification Programs",
-      description:
-        "Earn certifications that enhance your skills and add value to your professional journey.",
-      image: "https://placehold.co/600x400/000000/FFF",
-    },
-    {
-      title: "Skill Development",
-      description:
-        "Our programs are designed to help students build essential skills for their academic and professional growth.",
-      image: "https://placehold.co/600x400/000000/FFF",
-    },
-    {
-      title: "Learning Assessments",
-      description:
-        "Get access to assessments that track your learning progress and provide feedback for improvement.",
-      image: "https://placehold.co/600x400/000000/FFF",
-    },
-    {
-      title: "Resource Library",
-      description:
-        "Access a rich library of resources, including books, articles, and study materials to aid your learning.",
-      image: "https://placehold.co/600x400/000000/FFF",
-    },
-  ];
+import mobilization from "../../public/assets/services/mobilization.jpg"
+import training from "../../public/assets/services/training.jpg"
+import placement from "../../public/assets/services/placement.jpg"
+
+export const ourServicesData = [
+  {
+    title: "Candidate Mobilization",
+    desc: "We actively reach out to potential candidates through community engagement, awareness campaigns, and partnerships with local organizations. Our team conducts counseling sessions to understand their interests and career aspirations, ensuring they enroll in the right skill development program.",
+    image: mobilization,
+  },
+  {
+    title: "Skill Training",
+    desc: "Once enrolled, candidates undergo industry-relevant training in various domains, including technical, vocational, and professional skills. Our programs are aligned with government initiatives, industry standards, and employer requirements. We also provide soft skills, personality development, and communication training to enhance their employability ",
+    image: training,
+  },
+  {
+    title: "Placement Assistance",
+    desc: "After completing training, candidates receive career guidance, resume building, and interview preparation. We connect them with corporate partners, MSMEs, and government projects, facilitating job placements, apprenticeships, and entrepreneurship opportunities. Our strong network of employers ensures high placement rates, helping candidates build sustainable careers. ",
+    image: placement,
+  },
+];

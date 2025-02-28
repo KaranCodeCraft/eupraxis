@@ -1,7 +1,7 @@
 import { Email, Phone, LocationOn } from "@mui/icons-material";
 import ContactForm from "./ContactForm";
 
-const ContactCard = () => {
+const ContactUsView = () => {
   return (
     <div className="container mx-auto px-4">
       <div className="theme-clr text-4xl text-center font-bold">Contact us</div>
@@ -41,8 +41,8 @@ const ContactCard = () => {
               <div className="flex items-start gap-3">
                 <LocationOn className="theme-clr" />
                 <span>
-                  424, 4th Floor, DLF Prime Tower, Okhla Industrial Area, Phase
-                  1, New Delhi 110020
+                  IGCSM, 36B/1, Gali Number 1, near Kalkaji Depot, Govindpuri,
+                  New Delhi, Delhi 110019
                 </span>
               </div>
             </div>
@@ -50,7 +50,7 @@ const ContactCard = () => {
 
           <div className="map h-full rounded-2xl overflow-hidden">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3505.675595770547!2d77.28073537416357!3d28.519406389211245!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce14ba115d61b%3A0x3b032b8fffdcc574!2sDLF%20Prime%20Towers!5e0!3m2!1sen!2sin!4v1740768465000!5m2!1sen!2sin"
+              src="https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d3505.0691578039155!2d77.26317737416439!3d28.537640938385884!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m0!4m5!1s0x390ce3273585d443%3A0xc7a7216cc048015!2sIGCSM%2C%2036B%2F1%2C%20Gali%20Number%201%2C%20near%20Kalkaji%20Depot%2C%20Govindpuri%2C%20New%20Delhi%2C%20Delhi%20110019!3m2!1d28.5373003!2d77.2670435!5e0!3m2!1sen!2sin!4v1740777640338!5m2!1sen!2sin"
               className="w-full h-full border-0"
               loading="lazy"
             ></iframe>
@@ -60,10 +60,9 @@ const ContactCard = () => {
         <div className=" w-full md:w-1/2">
           <ContactForm />
         </div>
-        
       </div>
     </div>
   );
 };
 
-export default ContactCard;
+export default ContactUsView;
