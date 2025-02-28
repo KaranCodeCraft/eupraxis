@@ -47,15 +47,18 @@ hr {
     height: 5px;
     border-radius: 50px;
     transform: skew(-12deg) translateX(-50%);
-    background: #3CBEEE;
+    /* background: #3CBEEE; */
+    background: #f07c00;
     z-index: -1;
 }
 
 .theme-clr{
-    color:#3CBEEE
+    /* color:#3CBEEE */
+    color:#f07c00
 }
 .theme-bg{
-    background-color:#3CBEEE
+    /* background-color:#3CBEEE */
+    background-color:#f07c00
 }
 
 .testimonialbg {
