@@ -7,6 +7,7 @@ import ContactUs from "./components/LandingPage/ContactUs";
 import OurTeam from "./components/LandingPage/OurTeam";
 import WhoWeAre from "./components/LandingPage/WhoWeAre";
 import NewsAndNotifications from "./components/LandingPage/NewsAndNotifications";
+import OurIndustryPartners from "./components/LandingPage/OurIndustryPartners";
 
 export default function Home() {
   return (
@@ -31,14 +32,17 @@ export default function Home() {
       <div className="py-10" id="testimonial">
         <Testimonials />
       </div>
-      
+
+      <div className="py-10 bg-gray-50" id="industry">
+        <OurIndustryPartners />
+      </div>
       <div className="py-10 bg-gray-50" id="news">
         <NewsAndNotifications />
       </div>
 
-      <div id="contact" className="contact-us bg-blue-50 py-10">
+      {/* <div id="contact" className="contact-us bg-blue-50 py-10">
         <ContactUs />
-      </div>
+      </div> */}
     </main>
   );
 }

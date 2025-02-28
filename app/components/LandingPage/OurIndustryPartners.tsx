@@ -2,21 +2,21 @@
 
 import Image from "next/image";
 import Slider from "react-slick";
-
 // IMAGES DATA FOR CAROUSEL
 const data = [
     { imgSrc: "/assets/partners/industry/1.jpg" },
-    { imgSrc: "/assets/partners/2.jpg" },
-    { imgSrc: "/assets/partners/3.jpg" },
-    { imgSrc: "/assets/partners/4.jpg" },
-    { imgSrc: "/assets/partners/5.jpg" },
-    { imgSrc: "/assets/partners/6.jpg" },
-    { imgSrc: "/assets/partners/7.jpg" },
-    { imgSrc: "/assets/partners/8.jpg" },
-    { imgSrc: "/assets/partners/9.jpg" },
-    { imgSrc: "/assets/partners/10.jpg" },
-    { imgSrc: "/assets/partners/11.jpg" },
-    { imgSrc: "/assets/partners/12.jpg" },
+    { imgSrc: "/assets/partners/industry/2.png" },
+    { imgSrc: "/assets/partners/industry/3.png" },
+    { imgSrc: "/assets/partners/industry/4.png" },
+    { imgSrc: "/assets/partners/industry/5.png" },
+    { imgSrc: "/assets/partners/industry/6.jpg" },
+    { imgSrc: "/assets/partners/industry/7.png" },
+    { imgSrc: "/assets/partners/industry/8.png" },
+    { imgSrc: "/assets/partners/industry/9.png" },
+    { imgSrc: "/assets/partners/industry/10.png" },
+    { imgSrc: "/assets/partners/industry/11.png" },
+    { imgSrc: "/assets/partners/industry/12.jpg" },
+    { imgSrc: "/assets/partners/industry/13.jpg" },
 ];
 
 const OurIndustryPartners = () => {
