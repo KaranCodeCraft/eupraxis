@@ -12,9 +12,9 @@ import Image from "next/image";
 const OurTeam = () => {
   return (
     <div className="container mx-auto">
-      <h3 className="text-4xl theme-clr text-center font-bold">Our Team</h3>
+      <h4 className="theme-clr text-4xl font-bold px-6">Our Team</h4>
 
-      <div className="max-w-7xl mx-auto pt-12 px-6">
+      <div className=" mx-auto pt-12 px-6">
         <Swiper
           modules={[Navigation, Autoplay]}
           spaceBetween={20}

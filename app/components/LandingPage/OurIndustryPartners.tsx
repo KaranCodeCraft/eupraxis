@@ -57,7 +57,7 @@ const OurIndustryPartners = () => {
 
     return (
             <div className="mx-auto container px-4 sm:px-6  lg:px-8">
-                <h2 className="theme-clr text-start text-2xl font-bold">
+                <h2 className="theme-clr text-start text-4xl font-bold">
                     Industry Partners
                 </h2>
                 <div className="py-4 ">

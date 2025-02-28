@@ -49,12 +49,12 @@ const settings = {
 const Testimonials: React.FC = () => {
   return (
     <div className="mx-auto container sm:py-4 lg:px-8">
-      <h2 className="theme-clr text-4xl font-bold text-center">Testimonials</h2>
+      <h4 className="theme-clr text-4xl font-bold px-6">Testimonials</h4>
       <Slider {...settings}>
         {testimonialData?.map((items, i) => (
           <div key={i}>
             <div
-              className={`bg-white m-4 p-5 my-20 relative ${
+              className={`bg-white m-4 p-5 relative ${
                 i % 2 ? "middleDiv" : "testimonial-shadow"
               }`}
             >

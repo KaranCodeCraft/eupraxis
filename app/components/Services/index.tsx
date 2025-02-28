@@ -7,15 +7,13 @@ import { ourServicesData } from "@/app/data/ourServicesData";
 const Services: React.FC = () => {
   return (
     <div className="container mx-auto px-4">
-      <div className="text-center mx-auto">
-        <h4 className="theme-clr text-4xl font-bold">Our Services</h4>
-        <div className="flex justify-center">
-          <p className="text-gray-700 w-full my-auto md:w-3/4 px-4 py-2">
-            At {CMP_TITLE}, we follow a structured approach to mobilize, train,
-            and place candidates, ensuring they gain the right skills and secure
-            meaningful employment.
-          </p>
-        </div>
+      <div className=" mx-auto">
+        <h4 className="theme-clr text-4xl font-bold px-6">Our Services</h4>
+        <p className="text-gray-700 w-full my-auto  px-4 py-2">
+          At {CMP_TITLE}, we follow a structured approach to mobilize, train,
+          and place candidates, ensuring they gain the right skills and secure
+          meaningful employment.
+        </p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 px-5 mt-6">
           {ourServicesData?.map((service, index) => (
@@ -30,7 +28,7 @@ const Services: React.FC = () => {
 interface ServiceItem {
   title: string;
   desc: string;
-  image: StaticImageData; 
+  image: StaticImageData;
 }
 
 const ServiceCard: React.FC<{ service: ServiceItem }> = ({ service }) => {

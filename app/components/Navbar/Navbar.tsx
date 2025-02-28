@@ -47,7 +47,7 @@ const Navbar = () => {
 
   return (
     <Disclosure as="nav" className="navbar">
-      <div className="container mx-auto  py-4 lg:px-8">
+      <div className="container mx-auto px-4 py-4 lg:px-8">
         <div className="relative flex h-10 md:h-10 items-center justify-between">
           <div className="flex flex-row justify-between w-full">
             <div>
@@ -80,7 +80,7 @@ const Navbar = () => {
                         </Link>
 
                         {openDropdown === item.name && (
-                          <div className="absolute left-0 w-48 bg-white shadow-xl rounded-lg z-10 my-4">
+                          <div className="absolute left-0 w-48 bg-white shadow-xl rounded-lg z-50 my-4">
                             <ul>
                               {item.subItems.map((subItem) => (
                                 <li key={subItem.name}>
