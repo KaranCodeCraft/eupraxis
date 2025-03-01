@@ -54,6 +54,7 @@ const products: ProductType[] = [
     links: [
       { name: "Contact us", url: "/contact-us" },
       { name: "Work with us", url: "/career" },
+      { name: "Gallery", url: "/gallery" },
       // { name: "Partners", url: "/partners" },
     ],
   },
@@ -85,7 +86,7 @@ const Footer = () => {
               opportunities worldwide.
             </h3>
             <div className="flex gap-4">
-              {socialLinks.map((item, i) => (
+              {socialLinks?.map((item, i) => (
                 <Link href={item.link} key={i} target="">
                   <div className="bg-white h-12 w-12 shadow-xl rounded-full flex items-center justify-center hover:theme-clr">
                     <Image
@@ -102,7 +103,7 @@ const Footer = () => {
           </div>
 
           {/* Dynamic Columns */}
-          {products.map((product) => (
+          {products?.map((product) => (
             <div key={product.id} className="sm:col-span-2">
               <p className="text-white text-lg font-medium mb-5">
                 {product.section}
