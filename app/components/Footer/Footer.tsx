@@ -40,23 +40,26 @@ const socialLinks: SocialLink[] = [
 const products: ProductType[] = [
   {
     id: 1,
-    section: "Company",
+    section: "Quick links",
     links: [
       { name: "About", url: "/about-us" },
       { name: "How we work?", url: "/about-us" },
+      { name: "Our Approvals", url: "/approvals" },
+      { name: "FAQ", url: "/faq" },
     ],
   },
   {
     id: 2,
-    section: "Contact",
+    section: "Useful Links",
     links: [
-      { name: "Help/FAQ", url: "/help" },
-      { name: "Partners", url: "/partners" },
+      { name: "Contact us", url: "/contact-us" },
+      { name: "Work with us", url: "/career" },
+      // { name: "Partners", url: "/partners" },
     ],
   },
   {
     id: 3,
-    section: "Our Branches",
+    section: "Address",
     links: [
       {
         name: "IGCSM, 36B/1, Gali Number 1, near Kalkaji Depot, Govindpuri, New Delhi, Delhi 110019",
@@ -83,7 +86,7 @@ const Footer = () => {
             </h3>
             <div className="flex gap-4">
               {socialLinks.map((item, i) => (
-                <Link href={item.link} key={i} target="_blank">
+                <Link href={item.link} key={i} target="">
                   <div className="bg-white h-12 w-12 shadow-xl rounded-full flex items-center justify-center hover:theme-clr">
                     <Image
                       src={item.imgSrc}
@@ -101,7 +104,7 @@ const Footer = () => {
           {/* Dynamic Columns */}
           {products.map((product) => (
             <div key={product.id} className="sm:col-span-2">
-              <p className="text-white text-lg font-medium mb-9">
+              <p className="text-white text-lg font-medium mb-5">
                 {product.section}
               </p>
               <ul>
@@ -110,12 +113,12 @@ const Footer = () => {
                     {link.url ? (
                       <Link
                         href={link.url}
-                        className="text-white text-base font-normal mb-6 space-links"
+                        className="text-white text-base font-normal mb-3 space-links"
                       >
                         {link.name}
                       </Link>
                     ) : (
-                      <p className="text-white text-base font-normal mb-6">
+                      <p className="text-white text-base font-normal mb-3">
                         {link.name}
                       </p>
                     )}
@@ -133,13 +136,13 @@ const Footer = () => {
           </h4>
           <div className="flex gap-5 mt-5 md:mt-0 justify-center md:justify-start">
             <h4 className="text-white text-sm font-normal">
-              <Link href="/privacy-policy" target="_blank">
+              <Link href="/privacy-policy" target="">
                 Privacy policy
               </Link>
             </h4>
             <div className="h-5 bg-white opacity-25 w-0.5"></div>
             <h4 className="text-white text-sm font-normal">
-              <Link href="/terms-conditions" target="_blank">
+              <Link href="/terms-conditions" target="">
                 Terms & conditions
               </Link>
             </h4>

@@ -5,9 +5,9 @@ import React, { useState } from "react";
 import { usePathname } from "next/navigation";
 import { Bars3Icon } from "@heroicons/react/24/outline";
 import Drawer from "./Drawer";
-import Drawerdata from "./Drawerdata";
 import { CMP_TITLE } from "@/app/lib/constants";
 import { NavMenu } from "@/app/data/navMenu";
+import DrawerData from "./Drawerdata";
 
 function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(" ");
@@ -47,7 +47,7 @@ const Navbar = () => {
 
   return (
     <Disclosure as="nav" className="navbar">
-      <div className="container mx-auto px-4 py-4 lg:px-8">
+      <div className="container mx-auto px-4 py-4 lg:px-8 ">
         <div className="relative flex h-10 md:h-10 items-center justify-between">
           <div className="flex flex-row justify-between w-full">
             <div>
@@ -130,7 +130,7 @@ const Navbar = () => {
 
           <div className="block lg:hidden">
             <Drawer isOpen={isOpen} setIsOpen={setIsOpen}>
-              <Drawerdata />
+              <DrawerData setIsOpen={setIsOpen} />
             </Drawer>
           </div>
         </div>

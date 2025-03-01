@@ -6,11 +6,11 @@ function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(" ");
 }
 
-const Data = () => {
+const DrawerData = ({ setIsOpen }: any) => {
   const [dropdownOpen, setDropdownOpen] = useState<string | null>(null);
 
   const handleDropdownClick = (itemName: string) => {
-    setDropdownOpen(dropdownOpen === itemName ? null : itemName); // Close if clicked again, open otherwise
+    setDropdownOpen(dropdownOpen === itemName ? null : itemName);
   };
 
   return (
@@ -20,10 +20,8 @@ const Data = () => {
           <div className="space-y-1 px-5 pt-2 pb-3">
             {NavMenu?.map((item: any) => (
               <div key={item.name} className="relative">
-                {/* Check if item has subItems (e.g., "About us") */}
                 {item.subItems ? (
                   <div>
-                    {/* Main "About us" link */}
                     <Link
                       href={item.href}
                       className={classNames(
@@ -34,21 +32,26 @@ const Data = () => {
                       )}
                       aria-current={item.current ? "page" : undefined}
                       onClick={(e) => {
-                        e.preventDefault(); // Prevent default link action to handle the dropdown click
-                        handleDropdownClick(item.name); // Toggle dropdown visibility
+                        e.preventDefault();
+                        handleDropdownClick(item.name);
                       }}
                     >
                       {item.name}
                     </Link>
 
-                    {/* Dropdown Menu */}
                     {dropdownOpen === item.name && (
                       <div className="absolute left-0 mt-2 w-48 bg-white shadow-lg rounded-lg z-10">
                         <ul>
                           {item.subItems?.map((subItem: any) => (
-                            <li key={subItem.name}>
+                            <li
+                              onClick={() => {
+                                setIsOpen(false);
+                                setDropdownOpen(null)
+                              }}
+                              key={subItem.name}
+                            >
                               <Link
-                                href={subItem.href}
+                                href={subItem?.href}
                                 className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                               >
                                 {subItem.name}
@@ -60,9 +63,11 @@ const Data = () => {
                     )}
                   </div>
                 ) : (
-                  // For items without subItems (e.g., "Home", "Our services")
                   <Link
                     href={item.href}
+                    onClick={() => {
+                      setIsOpen(false);
+                    }}
                     className={classNames(
                       item.current
                         ? "text-black hover:opacity-100"
@@ -77,7 +82,6 @@ const Data = () => {
               </div>
             ))}
             <div className="mt-4"></div>
-            {/* Optional buttons can be added here */}
           </div>
         </div>
       </div>
@@ -85,4 +89,4 @@ const Data = () => {
   );
 };
 
-export default Data;
+export default DrawerData;

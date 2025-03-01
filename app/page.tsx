@@ -20,34 +20,29 @@ export default function Home() {
         <WhoWeAre />
       </div>
 
-      <hr className="w-3/6 h-1 mx-auto  theme-bg border-0 rounded-sm  dark:bg-gray-700" />
+      {/* <hr className="w-3/6 h-1 mx-auto  theme-bg border-0 rounded-sm  dark:bg-gray-700" /> */}
 
       <div id="services" className=" bg-lightkblue py-10">
         <Services />
       </div>
-      <hr className="w-3/6 h-1 mx-auto  theme-bg border-0 rounded-sm  dark:bg-gray-700" />
 
       <ScrollToTop />
 
       <div id="team" className=" py-10 ">
         <OurTeam />
       </div>
-      <hr className="w-3/6 h-1 mx-auto  theme-bg border-0 rounded-sm  dark:bg-gray-700" />
 
       <div className="py-10" id="testimonial">
         <Testimonials />
       </div>
-      <hr className="w-3/6 h-1 mx-auto  theme-bg border-0 rounded-sm  dark:bg-gray-700" />
 
       <div className="py-10 bg-gray-50" id="industry">
         <OurIndustryPartners />
       </div>
-      <hr className="w-3/6 h-1 mx-auto  theme-bg border-0 rounded-sm  dark:bg-gray-700" />
 
       <div className="py-10 bg-gray-50" id="news">
         <NewsAndNotifications />
       </div>
-      <hr className="w-3/6 h-1 mx-auto  theme-bg border-0 rounded-sm  dark:bg-gray-700" />
 
       {/* <div id="contact" className="contact-us bg-blue-50 py-10">
         <ContactUs />
