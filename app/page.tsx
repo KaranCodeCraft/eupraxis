@@ -2,12 +2,12 @@ import Testimonials from "./components/Testimonials/index";
 import Services from "./components/Services";
 import ScrollToTop from "./components/common/ScrollToTop";
 import BannerCarousel from "./components/Banner/BannerCarousel";
-import OurPartners from "./components/LandingPage/OurGovPartners";
 import ContactUs from "./components/LandingPage/ContactUs";
 import OurTeam from "./components/LandingPage/OurTeam";
 import WhoWeAre from "./components/LandingPage/WhoWeAre";
 import NewsAndNotifications from "./components/LandingPage/NewsAndNotifications";
-import OurIndustryPartners from "./components/LandingPage/OurIndustryPartners";
+import OurPartnersLogoSlider from "./components/LandingPage/OurPartnersLogoSlider";
+import { industryPartnersImages } from "./lib/constants";
 
 export default function Home() {
   return (
@@ -37,7 +37,8 @@ export default function Home() {
       </div>
 
       <div className="py-10 bg-gray-50" id="industry">
-        <OurIndustryPartners />
+
+        <OurPartnersLogoSlider title={"Industry Partners"}  images={industryPartnersImages}/>
       </div>
 
       <div className="py-10 bg-gray-50" id="news">

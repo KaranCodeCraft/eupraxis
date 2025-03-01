@@ -1,7 +1,6 @@
 "use client";
 import React from "react";
 import PageLinks from "../components/common/PageLink";
-import careerImg from "@/public/assets/career/career.jpg";
 
 const OurProjectsPage = () => {
   return (

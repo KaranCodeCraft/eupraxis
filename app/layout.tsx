@@ -1,7 +1,8 @@
 import "./globals.css";
 import Navbar from "./components/Navbar/index";
 import Footer from "./components/Footer/Footer";
-import OurPartners from "./components/LandingPage/OurGovPartners";
+import OurPartnersLogoSlider from "./components/LandingPage/OurPartnersLogoSlider";
+import { govPartnersImages } from "./lib/constants";
 
 export const metadata = {
   title: "Eupraxis",
@@ -23,7 +24,7 @@ export default function RootLayout({
         </div>
 
         <div id="partners" className="text-center py-3 bg-gray-100">
-          <OurPartners />
+          <OurPartnersLogoSlider images={govPartnersImages} />
         </div>
         <Footer />
       </body>

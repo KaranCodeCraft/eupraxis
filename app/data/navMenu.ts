@@ -16,6 +16,11 @@ export const NavMenu: NavigationItem[] = [
         { name: `Projects`, href: '/our-projects', current: false },
         { name: 'Skill Development', href: '/skill-development', current: false },
     ] },
-    { name: 'Our Recognitions', href: '/approvals', current: false },
+    { name: 'Our Recognitions', href: '', current: false, subItems: [
+        { name: `Industry Tie ups`, href: '/approvals-and-collabrations/industry-tie-ups', current: false },
+        { name: `Government Partnership`, href: '/approvals-and-collabrations/government-partnership', current: false },
+        { name: `Placement Tie ups`, href: '/approvals-and-collabrations/placement-tie-ups', current: false },
+        { name: `Approvals`, href: '/approvals-and-collabrations/approvals', current: false },
+    ] },
     { name: 'Contact Us', href: '/contact-us', current: false },
 ];

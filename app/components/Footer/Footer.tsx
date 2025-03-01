@@ -44,7 +44,7 @@ const products: ProductType[] = [
     links: [
       { name: "About", url: "/about-us" },
       { name: "How we work?", url: "/about-us" },
-      { name: "Our Approvals", url: "/approvals" },
+      { name: "Our Approvals", url: "/approvals-and-collabrations/approvals" },
       { name: "FAQ", url: "/faq" },
     ],
   },
