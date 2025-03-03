@@ -23,7 +23,7 @@ const AboutUsPage = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-2 items-center">
           <div className="flex flex-col gap-4  text-gray-700">
-            <p>
+            <p>{`
               Eupraxis is dedicated to empowering individuals in rural areas by
               bridging the gap between education and industry needs. Our mission
               is to provide aspiring professionals in underserved communities
@@ -32,11 +32,13 @@ const AboutUsPage = () => {
               industry collaborations, and innovative learning solutions, we aim
               to create pathways to employment and entrepreneurship in rural
               regions.
+            `}
             </p>
-            <p>
+            <p>{`
               With a strong commitment to excellence, we focus on transforming
               careers, fostering entrepreneurship, and driving economic growth
               in rural communities through skill-based education.
+            `}
             </p>
           </div>
 
