@@ -4,6 +4,7 @@ import PageLinks from "../components/common/PageLink";
 import { CMP_TITLE } from "../lib/constants";
 import Image from "next/image";
 import aboutImg from "@/public/assets/about/about.png";
+import AchievementsSection from "../components/Projects/Achievement";
 
 const AboutUsPage = () => {
   return (
@@ -17,12 +18,12 @@ const AboutUsPage = () => {
         ]}
       />
       <div className="container mx-auto py-8 px-5">
-        <h3 className="theme-clr  text-3xl"> About Eupraxis</h3>
+        <h3 className="theme-clr  font-bold text-3xl"> About Eupraxis</h3>
 
         <div className="flex flex-col justify-evenly  md:flex-row gap-5 py-5 ">
           <div className="about flex flex-col gap-3 text-gray-700 w-full md:w-1/2">
             <p className="">
-             {`
+              {`
               ${CMP_TITLE} is dedicated to empowering individuals in rural areas
               by bridging the gap between education and industry needs. Our
               mission is to provide aspiring professionals in underserved
@@ -64,6 +65,9 @@ const AboutUsPage = () => {
               className="w-full object-cover "
             />
           </div>
+        </div>
+        <div>
+          <AchievementsSection />
         </div>
       </div>
     </>

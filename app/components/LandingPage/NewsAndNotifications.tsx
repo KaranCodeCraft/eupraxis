@@ -41,26 +41,26 @@ const circulars = [
   },
 ];
 
-const NewsAndNotifications = () => {
+const NewsAndNotifications = ({ isCol }: { isCol?: boolean }) => {
   return (
     <div className="container mx-auto px-4">
-      <div className=" py-5">
+      <div className="py-5">
         <h4 className="theme-clr text-4xl font-bold px-6">News Updates</h4>
         <h4 className="text-gray-600 text-xl font-bold px-6">
           Latest News & Notice Board
         </h4>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <div className="theme-bg text-white p-6 rounded-lg shadow-lg">
-          <h3 className="text-center text-xl font-semibold mb-4">
-            Announcement
-          </h3>
+      {/* Conditionally apply flex or grid layout */}
+      <div className={isCol ? "flex flex-col md:flex-col gap-8" : "grid grid-cols-1 md:grid-cols-2 gap-8"}>
+        {/* Announcement Box */}
+        <div className="theme-bg text-white p-6 rounded-lg shadow-lg flex-1">
+          <h3 className="text-center text-xl font-semibold mb-4">Announcement</h3>
           <div className="overflow-hidden h-48">
             <div className="space-y-3 animate-marquee hover:pause">
               {announcements.map((item, index) => (
                 <p key={index} className="text-xs">
-                  <ArrowForwardIcon className="" />
+                  <ArrowForwardIcon className="mr-1" />
                   {item.text}{" "}
                   <a href={item.link} className="text-yellow-300">
                     click here
@@ -71,13 +71,14 @@ const NewsAndNotifications = () => {
           </div>
         </div>
 
-        <div className="bg-white p-6 rounded-lg shadow-lg">
+        {/* Circulars Box */}
+        <div className="bg-white p-6 rounded-lg shadow-lg flex-1">
           <h3 className="text-center text-xl font-semibold mb-4">Circulars</h3>
           <div className="overflow-hidden h-48">
             <div className="space-y-3 animate-marquee hover:pause">
               {circulars.map((item, index) => (
                 <p key={index} className="text-xs text-gray-700">
-                  <ArrowForwardIcon className="" />
+                  <ArrowForwardIcon className="mr-1" />
                   {item.text}{" "}
                   <a href={item.link} className="text-blue-500">
                     click here
