@@ -6,16 +6,16 @@ import { ourServicesData } from "@/app/data/ourServicesData";
 
 const Services: React.FC = () => {
   return (
-    <div className="container mx-auto px-4">
+    <div className="container mx-auto ">
       <div className=" mx-auto">
-        <h4 className="theme-clr text-4xl font-bold px-6">Our Services</h4>
-        <p className="text-gray-700 w-full my-auto  px-4 py-2">
+        <h4 className="theme-clr text-4xl font-bold ">Our Services</h4>
+        <p className="text-gray-700 w-full my-auto py-2 indent-10">
           At {CMP_TITLE}, we follow a structured approach to mobilize, train,
           and place candidates, ensuring they gain the right skills and secure
           meaningful employment.
         </p>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 px-5 mt-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6  mt-6">
           {ourServicesData?.map((service, index) => (
             <ServiceCard key={index} service={service} />
           ))}

@@ -1,6 +1,8 @@
 "use client";
 import PageLinks from "@/app/components/common/PageLink";
+import Image from "next/image";
 import React, { useState } from "react";
+import govImg from "@/public/assets/partners/gov.jpg";
 const GovernmentPartnersPage = () => {
   return (
     <>
@@ -18,8 +20,10 @@ const GovernmentPartnersPage = () => {
 
       <div className="container mx-auto py-8 px-10 flex flex-col gap-5 ">
         <h2 className="text-4xl theme-clr font-bold">Government Partnership</h2>
-        <p className="text-gray-600 indent-10">
-          {`
+        <div className="flex flex-col md:flex-row">
+          <div className="content w-full md:w-2/3">
+            <p className="text-gray-600 indent-10">
+              {`
           Our partnerships with government agencies are a cornerstone of our
           mission to uplift rural communities through skill development. By
           collaborating with central and state governments, we align our
@@ -29,10 +33,10 @@ const GovernmentPartnersPage = () => {
           education, industry-relevant certifications, and sustainable
           employment solutions to remote areas where opportunities are scarce.
           `}
-        </p>
+            </p>
 
-        <p className="text-gray-600 indent-10">
-          {`
+            <p className="text-gray-600 indent-10 pt-4">
+              {`
           Government support also enables us to build training centers, provide
           stipends for learners, and develop infrastructure that supports
           skill-building in rural regions. By working hand-in-hand with
@@ -43,7 +47,18 @@ const GovernmentPartnersPage = () => {
           contributing to India’s vision of an inclusive and self-reliant
           workforce.
           `}
-        </p>
+            </p>
+          </div>
+          <div className=" flex justify-center order-4  md:order-2">
+            <Image
+              src={govImg}
+              width={400}
+              height={250}
+              alt="Our Work"
+              className="w-full max-w-[400px] h-auto rounded-lg object-cover"
+            />
+          </div>
+        </div>
       </div>
     </>
   );

@@ -18,15 +18,15 @@ const ChairmanMessagePage = () => {
       />
 
       {/* Chairman's Message Section */}
-      <div className="container mx-auto w-full md:w-5/6 px-5 py-5">
+      <div className="container mx-auto w-full px-4 py-5">
         <div className="flex flex-col lg:flex-row items-center">
-          <div className="relative  m-8 md:m-10">
+          <div className="relative  m-7">
             <Image
               src={img}
               alt="Chairman"
-              width={250}
-              height={250}
-              className="rounded-lg shadow-lg w-full h-auto object-cover"
+              width={300}
+              height={300}
+              className="rounded-lg  shadow-lg h-72 w-full object-cover"
             />
             <div className="absolute -bottom-7 -right-5 bg-red text-white py-3 px-6 rounded-lg text-lg font-bold shadow-md">
               <p className="border-4 border-white border-dashed p-3 font-extrabold tracking-wide">
@@ -36,9 +36,6 @@ const ChairmanMessagePage = () => {
           </div>
 
           <div className="w-full lg:w-2/3 text-gray-800  h-full">
-            <h2 className="text-4xl font-bold text-gray-900 mb-6">
-              {`Chairman's Message`}
-            </h2>
             <p className="mb-4 leading-relaxed">
               {`Education is essential for the growth and development of a country, but with skilled specific education it adds to the overall socio-economic and human resource development of the nation.`}
             </p>
@@ -60,7 +57,6 @@ const ChairmanMessagePage = () => {
         <p className="mb-4 leading-relaxed">
           {`Let us use our knowledge and skills for the betterment of society and to address the pressing challenges faced by humanity. We visualize making the world a better place by educating people and making them aware of their own conscience as well as working towards a sustainable and progressive future for generations to come.`}
         </p>
-
 
         {/* Signature Section */}
         <div className="mt-6">

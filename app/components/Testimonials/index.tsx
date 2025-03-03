@@ -48,8 +48,8 @@ const settings = {
 
 const Testimonials: React.FC = () => {
   return (
-    <div className="mx-auto container sm:py-4 lg:px-8">
-      <h4 className="theme-clr text-4xl font-bold px-6">Testimonials</h4>
+    <div className="mx-auto container ">
+      <h4 className="theme-clr text-4xl font-bold ">Testimonials</h4>
       <Slider {...settings}>
         {testimonialData?.map((items, i) => (
           <div key={i}>

@@ -16,32 +16,29 @@ export default function Home() {
         <BannerCarousel />
       </div>
 
-      <div className="py-10 container mx-auto ">
+      <div className="py-10 container mx-auto px-4 md:px-8">
         <WhoWeAre />
       </div>
 
-      {/* <hr className="w-3/6 h-1 mx-auto  theme-bg border-0 rounded-sm  dark:bg-gray-700" /> */}
-
-      <div id="services" className=" bg-lightkblue py-10">
+      <div id="services" className=" bg-lightkblue py-10 px-4 md:px-8">
         <Services />
       </div>
 
       <ScrollToTop />
 
-      <div id="team" className=" py-10 ">
+      <div id="team" className=" py-10 px-4 md:px-8 ">
         <OurTeam />
       </div>
 
-      <div className="py-10" id="testimonial">
+      <div className="py-10 px-4 md:px-8" id="testimonial">
         <Testimonials />
       </div>
 
       <div className="py-10 bg-gray-50" id="industry">
-
         <OurPartnersLogoSlider title={"Industry Partners"}  images={industryPartnersImages}/>
       </div>
 
-      <div className="py-10 bg-gray-50" id="news">
+      <div className="bg-gray-50 px-4 md:px-8" id="news">
         <NewsAndNotifications />
       </div>
 

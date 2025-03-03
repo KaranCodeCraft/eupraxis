@@ -14,7 +14,7 @@ export const NavMenu: NavigationItem[] = [
     ] },
     { name: 'Our services', href: '', current: false, subItems: [
         { name: `Projects`, href: '/our-projects', current: false },
-        { name: 'Skill Development', href: '/skill-development', current: false },
+        { name: 'Our Expertise', href: '/our-expertise', current: false },
     ] },
     { name: 'Our Recognitions', href: '', current: false, subItems: [
         { name: `Industry Tie ups`, href: '/approvals-and-collabrations/industry-tie-ups', current: false },

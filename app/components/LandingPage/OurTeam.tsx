@@ -12,9 +12,9 @@ import Image from "next/image";
 const OurTeam = () => {
   return (
     <div className="container mx-auto">
-      <h4 className="theme-clr text-4xl font-bold px-6">Our Team</h4>
+      <h4 className="theme-clr text-4xl font-bold ">Our Team</h4>
 
-      <div className=" mx-auto pt-12 px-6">
+      <div className=" mx-auto pt-3 ">
         <Swiper
           modules={[Navigation, Autoplay]}
           spaceBetween={20}
@@ -30,7 +30,7 @@ const OurTeam = () => {
           // pagination={{ clickable: true }}
           autoplay={{ delay: 2000, disableOnInteraction: false }}
           loop={true} 
-          className="py-6"
+          className=""
         >
           {ourTeamData?.map((member, index) => (
             <SwiperSlide key={index}>
