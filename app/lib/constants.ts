@@ -1,4 +1,4 @@
-export const CMP_TITLE ='Eupraxis'
+export const CMP_TITLE = 'Eupraxis'
 
 export const placementPartnersImages = [
     { imgSrc: "/assets/partners/Placement-partners/1.jpg" },
@@ -43,3 +43,21 @@ export const industryPartnersImages = [
     { imgSrc: "/assets/partners/industry/12.jpg" },
     { imgSrc: "/assets/partners/industry/13.jpg" },
 ];
+
+export const approvals = [
+    {
+        name: "RCPSDC Certificate",
+        url: "/pdfs/Affiliation Certificate/RCPSDC.pdf",
+        logo: "/assets/partners/approvals/rcpsdc.png",
+    },
+    {
+        name: "THSC Certificate",
+        url: "/pdfs/Affiliation Certificate/THSC.pdf",
+        logo: "/assets/partners/approvals/thsc.png",
+    },
+    {
+        name: "ISO Certificate",
+        url: "/pdfs/ISO Certificate/ISO.pdf",
+        logo: "/assets/partners/approvals/iso.png",
+    },
+]
