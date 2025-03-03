@@ -2,7 +2,6 @@ import Testimonials from "./components/Testimonials/index";
 import Services from "./components/Services";
 import ScrollToTop from "./components/common/ScrollToTop";
 import BannerCarousel from "./components/Banner/BannerCarousel";
-import ContactUs from "./components/LandingPage/ContactUs";
 import OurTeam from "./components/LandingPage/OurTeam";
 import WhoWeAre from "./components/LandingPage/WhoWeAre";
 import NewsAndNotifications from "./components/LandingPage/NewsAndNotifications";
@@ -34,11 +33,11 @@ export default function Home() {
         <Testimonials />
       </div>
 
-      <div className="py-10 bg-gray-50" id="industry">
+      <div className="py-10 bg-gray-50 px-4 md:px-8" id="industry">
         <OurPartnersLogoSlider title={"Industry Partners"}  images={industryPartnersImages}/>
       </div>
 
-      <div className="bg-gray-50 px-4 md:px-8" id="news">
+      <div className="bg-gray-50 px-4 md:px-8 mb-10" id="news">
         <NewsAndNotifications />
       </div>
 

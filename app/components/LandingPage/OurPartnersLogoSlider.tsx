@@ -40,7 +40,7 @@ const OurPartnersLogoSlider = ({ images, title }: any) => {
   };
 
   return (
-    <div className="mx-auto container px-4 sm:px-6  lg:px-8">
+    <div className="mx-auto container ">
       {title && (
         <h2 className="theme-clr text-start text-4xl font-bold">{title}</h2>
       )}

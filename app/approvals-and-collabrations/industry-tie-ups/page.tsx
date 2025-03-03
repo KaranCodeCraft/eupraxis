@@ -52,11 +52,12 @@ const IndustryTieUpsPage = () => {
             />
           </div>
         </div>
-
-        <OurPartnersLogoSlider
-          title="Industry Partners"
-          images={industryPartnersImages}
-        />
+        <div className="px-6">
+          <OurPartnersLogoSlider
+            title="Industry Partners"
+            images={industryPartnersImages}
+          />
+        </div>
       </div>
     </>
   );

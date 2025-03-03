@@ -2,10 +2,11 @@
 import React from "react";
 import PageLinks from "../components/common/PageLink";
 import { skillDevelopmentData } from "../data/skillDevelopmentData";
-
 import { School, Work, Handshake } from "@mui/icons-material";
 import Image from "next/image";
 import skillsImg from "@/public/assets/skills/skills.jpg";
+import ImagesList from "../components/common/ImagesList";
+import { ourExpertiesImages } from "../lib/constants";
 
 const skillCategories = [
   {
@@ -16,7 +17,8 @@ const skillCategories = [
   },
   {
     title: "Skill Training",
-    description:"Once enrolled, candidates undergo industry-relevant training in various domains, including technical, vocational, and professional skills. Our programs are aligned with government initiatives, industry standards, and employer requirements. We also provide soft skills, personality development, and communication training to enhance their employability.",
+    description:
+      "Once enrolled, candidates undergo industry-relevant training in various domains, including technical, vocational, and professional skills. Our programs are aligned with government initiatives, industry standards, and employer requirements. We also provide soft skills, personality development, and communication training to enhance their employability.",
     icon: <Work fontSize="large" className="text-green-500 h-16 w-16" />,
   },
   {
@@ -87,7 +89,9 @@ const OurExpertisePage = () => {
             Discover Our Approach to Skill Development
           </h2>{" "}
           <p className="text-gray-600 mt-2">
-          At Euperaxis, we follow a structured approach to mobilize, train, and place candidates, ensuring they gain the right skills and secure meaningful employment. 
+            At Euperaxis, we follow a structured approach to mobilize, train,
+            and place candidates, ensuring they gain the right skills and secure
+            meaningful employment.
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-6 pt-6">
             {skillCategories.map((category, index) => (
@@ -103,6 +107,12 @@ const OurExpertisePage = () => {
               </div>
             ))}
           </div>
+        </div>
+
+        <div className="insights px-2">
+          <h3 className="text-2xl theme-clr font-bold py-4">Crafting a Better Tomorrow with Our Expertise </h3>
+
+          <ImagesList list={ourExpertiesImages} />
         </div>
       </div>
     </>

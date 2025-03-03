@@ -282,7 +282,8 @@ const PlacementTieUpsPage = () => {
           )}
         </div>
       </div>
-      <div className="mb-10 bg-orange-50 py-5">
+      <div className="mb-10 bg-orange-50 py-5 px-6">
+        
         <OurPartnersLogoSlider
           title={"Placement Partners"}
           images={placementPartnersImages}
