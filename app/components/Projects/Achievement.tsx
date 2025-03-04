@@ -11,18 +11,22 @@ import {
 } from "@mui/icons-material";
 
 const AchievementsSection = () => {
-  // Calculate totals
-  const totals = projectsData?.trainingPartners.reduce(
-    (acc, tp) => {
-      acc.batches += tp.batches;
-      acc.enrolled += tp.enrolled;
-      acc.trained += tp.trained;
-      acc.underTraining += tp.underTraining;
-      acc.placement += tp.placement;
-      return acc;
-    },
-    { batches: 0, enrolled: 0, trained: 0, underTraining: 0, placement: 0 }
+  const trainingPartnersArray = projectsData.financialYears.flatMap(
+    (year) => year.trainingPartners
   );
+  
+  const totals = trainingPartnersArray?.length
+  ? trainingPartnersArray?.reduce(
+    (acc, tp) => ({
+      batches: acc.batches + (tp.batches || 0),
+      enrolled: acc.enrolled + (tp.enrolled || 0),
+      trained: acc.trained + (tp.trained || 0),
+      underTraining: acc.underTraining + (tp.underTraining || 0),
+      placement: acc.placement + (tp.placement || 0),
+    }),
+    { batches: 0, enrolled: 0, trained: 0, underTraining: 0, placement: 0 }
+  )
+  : { batches: 0, enrolled: 0, trained: 0, underTraining: 0, placement: 0 };
 
   const stats = [
     {

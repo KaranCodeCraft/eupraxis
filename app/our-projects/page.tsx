@@ -1,12 +1,37 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import PageLinks from "../components/common/PageLink";
-import { projectsData } from "../data/projectsData";
 import AchievementsSection from "../components/Projects/Achievement";
+import { projectsData } from "../data/projectsData";
 
 const OurProjectsPage = () => {
+  const [selectedYear, setSelectedYear] = useState("All");
+  const [currentPage, setCurrentPage] = useState(1);
+  const recordsPerPage = 11;
+
+  const financialYears = [
+    "All",
+    ...projectsData?.financialYears.map((fy) => fy.financialYear),
+  ];
+
+  // Filter records based on selected financial year
+  const filteredData =
+    selectedYear === "All"
+      ? projectsData.financialYears.flatMap((fy) => fy.trainingPartners)
+      : projectsData.financialYears.find(
+          (fy) => fy.financialYear === selectedYear
+        )?.trainingPartners || [];
+
+  // Pagination logic
+  const totalPages = Math.ceil(filteredData.length / recordsPerPage);
+  const startIndex = (currentPage - 1) * recordsPerPage;
+  const paginatedData = filteredData.slice(
+    startIndex,
+    startIndex + recordsPerPage
+  );
+
   // Calculate totals for numeric columns
-  const totals = projectsData.trainingPartners.reduce(
+  const totals = filteredData.reduce(
     (acc, tp) => {
       acc.batches += tp.batches;
       acc.enrolled += tp.enrolled;
@@ -17,6 +42,11 @@ const OurProjectsPage = () => {
     },
     { batches: 0, enrolled: 0, trained: 0, underTraining: 0, placement: 0 }
   );
+  const trainingPartnersArray = projectsData.financialYears.flatMap(
+    (year) => year.trainingPartners
+  );
+
+  console.log(trainingPartnersArray);
 
   return (
     <>
@@ -30,7 +60,30 @@ const OurProjectsPage = () => {
       />
       <div className="container mx-auto py-8 px-5">
         <h3 className="theme-clr font-bold text-3xl">Our Projects</h3>
-        <div className="overflow-x-auto py-4">
+
+        {/* Filter Dropdown */}
+        <div className="my-4">
+          <label className="font-semibold">Filter by Financial Year: </label>
+          <select
+            className="border px-2 py-1 ml-2"
+            value={selectedYear}
+            onChange={(e) => {
+              setSelectedYear(e.target.value);
+              setCurrentPage(1);
+            }}
+          >
+            {financialYears.map((year, index) => (
+              <option key={index} value={year}>
+                {year}
+              </option>
+            ))}
+          </select>
+        </div>
+
+        <div
+          className="overflow-x-auto overflow-y-auto"
+          style={{ maxHeight: "1000px" }}
+        >
           <table className="w-full border-collapse border border-gray-300 shadow-md">
             <thead>
               <tr className="bg-gray-200 text-gray-700 text-center border border-gray-400">
@@ -53,7 +106,7 @@ const OurProjectsPage = () => {
               </tr>
             </thead>
             <tbody>
-              {projectsData?.trainingPartners.map((tp, index) => (
+              {paginatedData.map((tp, index) => (
                 <tr key={index} className="text-gray-700 text-left border">
                   <td className="p-1 text-sm border border-gray-300">
                     {tp.tpName}
@@ -112,6 +165,27 @@ const OurProjectsPage = () => {
               </tr>
             </tbody>
           </table>
+        </div>
+
+        {/* Pagination Controls */}
+        <div className="flex justify-center items-center mt-4 space-x-2">
+          <button
+            disabled={currentPage === 1}
+            onClick={() => setCurrentPage(currentPage - 1)}
+            className="px-3 py-1 bg-gray-300 hover:bg-gray-400 disabled:opacity-50"
+          >
+            Prev
+          </button>
+          <span className="font-semibold">
+            Page {currentPage} of {totalPages}
+          </span>
+          <button
+            disabled={currentPage === totalPages}
+            onClick={() => setCurrentPage(currentPage + 1)}
+            className="px-3 py-1 bg-gray-300 hover:bg-gray-400 disabled:opacity-50"
+          >
+            Next
+          </button>
         </div>
 
         <AchievementsSection />

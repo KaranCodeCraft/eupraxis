@@ -26,7 +26,7 @@ const ChairmanMessagePage = () => {
               alt="Chairman"
               width={300}
               height={300}
-              className="rounded-lg  shadow-lg h-72 w-full object-cover"
+              className="rounded-lg  shadow-lg md:h-72 h-52 w-full object-cover"
             />
             <div className="absolute -bottom-7 -right-5 bg-red text-white py-3 px-6 rounded-lg text-lg font-bold shadow-md">
               <p className="border-4 border-white border-dashed p-3 font-extrabold tracking-wide">
