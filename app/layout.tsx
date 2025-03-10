@@ -1,8 +1,5 @@
+import LayoutWrapper from "./components/appLayout/LayoutWrapper";
 import "./globals.css";
-import Navbar from "./components/Navbar/index";
-import Footer from "./components/Footer/Footer";
-import OurPartnersLogoSlider from "./components/LandingPage/OurPartnersLogoSlider";
-import { govPartnersImages } from "./lib/constants";
 
 export const metadata = {
   title: "Eupraxis",
@@ -14,19 +11,10 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  
   return (
     <html lang="en">
       <body>
-        <Navbar />
-        <div className="min-h-[300px]">
-        {children}
-        </div>
-
-        <div id="partners" className="text-center py-3 bg-gray-100">
-          <OurPartnersLogoSlider images={govPartnersImages} />
-        </div>
-        <Footer />
+        <LayoutWrapper children={children} />
       </body>
     </html>
   );
