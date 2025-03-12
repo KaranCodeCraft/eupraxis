@@ -79,7 +79,6 @@ const AboutUsPage = () => {
             </p>
           </div>
 
-
           <div className="flex justify-center items-center w-full order-4 md:order-2">
             {loading ? (
               <Skeleton

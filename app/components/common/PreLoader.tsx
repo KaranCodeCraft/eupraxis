@@ -1,16 +1,14 @@
 "use client";
-import React, { useState } from "react";
-import Lottie from "lottie-react";
-import animationData from '@/public/animations/loading.json'
+
+import React from "react";
+import { CircularProgress } from "@mui/material";
 
 const PreLoader = () => {
-
   return (
-    <div className="fixed inset-0 flex items-center justify-center bg-transparent bg-opacity-80 z-50">
-      <Lottie animationData={animationData} loop={true} />
+    <div className="fixed inset-0 flex items-center justify-center bg-white bg-opacity-80 z-50">
+      <CircularProgress size={60} thickness={4} sx={{ color: "#FF9800" }} />
     </div>
   );
 };
 
 export default PreLoader;
-
